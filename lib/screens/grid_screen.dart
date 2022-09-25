@@ -19,7 +19,7 @@ class GridScreen extends StatelessWidget {
                   crossAxisCount: 3,
                   crossAxisSpacing: 5,
                   mainAxisSpacing: 5,
-                  children: List.generate(10, (index) {
+                  children: List.generate(48, (index) {
                       return  GestureDetector(
                         onTap: (){
                             Navigator.push( context, MaterialPageRoute(builder: (context) => ImageDetail(
