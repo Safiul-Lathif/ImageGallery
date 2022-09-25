@@ -27,21 +27,7 @@ class _ImageDetailState extends State<ImageDetail> {
   
 
   
- return  (widget.index == index) ? Container(
-   margin: EdgeInsets.all(5.0),
-   child: ClipRRect(
-       borderRadius: BorderRadius.all(Radius.circular(5.0)),
-       child: Column(
-         children: <Widget>[
-           SizedBox(height: 200,),
-     Center(child: 
-   
-       Image(image: AssetImage("assets/gallery (${widget.index
-       }).jpg"),)
-     ),
-      ],
-       )),
- ):Container(
+ return  Container(
           margin: EdgeInsets.all(5.0),
           child: ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(5.0)),
@@ -50,7 +36,7 @@ class _ImageDetailState extends State<ImageDetail> {
                   SizedBox(height: 200,),
             Center(child: 
           
-              Image(image: AssetImage("assets/gallery (${index
+              Image(image: AssetImage("assets/image (${index
               }).jpg"),)),
              ],
               )),
@@ -68,8 +54,9 @@ class _ImageDetailState extends State<ImageDetail> {
             children: [
               Center(
                 child: CarouselSlider(
+              
                   items: imageSliders,
-                  options: CarouselOptions(enlargeCenterPage: true, height: 800),
+                  options: CarouselOptions(enlargeCenterPage: true, height: 800,initialPage:widget.index ),
                   carouselController: _controller,
                 ),
               ),
