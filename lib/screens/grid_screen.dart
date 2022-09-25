@@ -39,9 +39,9 @@ setState(() {
                   crossAxisCount: 3,
                   crossAxisSpacing: 5,
                   mainAxisSpacing: 5,
-                  children: 
-                 // List.generate(isSort?images.reversed.toList().length: images.length, (index) {
+
          isSort? images.reversed.map((e) {
+
                       return  GestureDetector(
                         onTap: (){
           
